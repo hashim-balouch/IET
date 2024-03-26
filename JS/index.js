@@ -1,7 +1,7 @@
 const btn = document.querySelector("#hamburger");
 const line2 = document.querySelector(".second");
 const line3 = document.querySelector(".third");
-const main = document.querySelector(".main");
+const main = document.querySelector("main");
 const slides = document.querySelector(".slides");
 const slide_1 = document.querySelector(".slide_1");
 const slide_2 = document.querySelector(".slide_2");
@@ -21,7 +21,6 @@ function setDisplay(element, param) {
   element.style.display = param;
 }
 function insertTransitions() {
-  scrollPosition = window.scrollY;
   setDisplay(slide_1, "inline-block");
   setDisplay(slide_2, "inline-block");
   setDisplay(slide_3, "inline-block");
@@ -35,31 +34,28 @@ function insertTransitions() {
     liElement.style.opacity = "0";
   });
 
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-  }, 600);
-  main.style.animation =
-    "800ms   cubic-bezier(0.5, 0.1, 1, 0.1) 0s 1 normal forwards animatemain";
+  // main.style.animation =
+  //   "animatemain 1.8s cubic-bezier(1,0,1,.44) 0s 1 normal forwards";
 
   slide_1.style.animation =
-    "600ms   cubic-bezier(0.5, 0.1, 1, 0.1) 0s 1 normal forwards animateslides";
+    "600ms ease-in-out 400ms 1 normal forwards animateslides";
 
   slide_2.style.animation =
-    "150ms linear 900ms 1 normal forwards animateslides";
+    "150ms linear 1600ms 1 normal forwards animateslides";
 
   slide_3.style.animation =
-    "150ms linear 1500ms 1 normal forwards animateslides";
+    "150ms linear 2200ms 1 normal forwards animateslides";
 
   setTimeout(() => {
-    setDisplay(nav, "inline-block");
-    nav.style.animation = "600ms ease-out 0s 1 normal forwards animateslides";
+    setDisplay(nav, "flex");
+    nav.style.animation = "300ms ease-out 0s 1 normal forwards animateslides";
     for (let index = 0; index < liElements.length; index++) {
       setTimeout(() => {
         liElements[index].style.animation =
           "250ms ease-out 100ms 1 normal forwards running navitems";
       }, 600 + index * 100);
     }
-  }, 2000);
+  }, 2450);
 }
 function insertReverseTransitions() {
   nav.style.left = "0";
@@ -69,7 +65,6 @@ function insertReverseTransitions() {
   liElements.forEach((liElement) => {
     liElement.style.opacity = "1";
   });
-  document.querySelector("body").style.overflowY = "auto";
 
   nav.style.animation =
     "600ms cubic-bezier(0.5, 0.1, 1, 0.1) 0s 1 normal forwards animatenavrev";
@@ -80,7 +75,13 @@ function insertReverseTransitions() {
   slide_1.style.animation =
     "150ms linear 1500ms 1 normal forwards animateslidesrev";
   setTimeout(() => {
+    document.querySelector("body").style.overflowY = "auto";
+    window.scrollBy(0, scrollPosition);
+  }, 800);
+  setTimeout(() => {
     setDisplay(nav, "none");
+  }, 600);
+  setTimeout(() => {
     setDisplay(slide_1, "none");
     setDisplay(slide_2, "none");
     setDisplay(slide_3, "none");
@@ -91,7 +92,6 @@ function ClearAnimations() {
   slide_1.style.animation = "none";
   slide_2.style.animation = "none";
   slide_3.style.animation = "none";
-  main.style.animation = "none";
   liElements.forEach((liElement) => {
     liElement.style.animation = "none";
   });
@@ -103,9 +103,6 @@ function Clickbtn() {
   btn.classList.toggle("hover");
   if (btn.classList.contains("clicked")) {
     insertReverseTransitions();
-
-    window.scrollBy(0, scrollPosition);
-    console.log("hey");
   } else {
     insertTransitions();
   }
@@ -126,75 +123,3 @@ function Clickbtn() {
   }, 3000);
 }
 btn.addEventListener("click", Clickbtn);
-const element = document.querySelector(".sliderauto");
-function anchors(button, location) {
-  button.addEventListener("click", () => {
-    Clickbtn();
-
-    setTimeout(() => {
-      document
-        .querySelector(location)
-        .scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 600);
-  });
-}
-anchors(home, ".typewriter");
-
-anchors(events, ".eventsdiv");
-anchors(team, ".wrapTeam");
-anchors(news, "article");
-anchors(faqs, ".faqs");
-anchors(contact, "footer");
-
-//Add the REST...
-
-const hammertime = new Hammer(element);
-
-const ChildOfElm = Array.from(element.children);
-let count = 1;
-
-function NextSlide() {
-  if (count < ChildOfElm.length - 2) {
-    ChildOfElm[count - 1].classList.remove("goaway", "comeback");
-    ChildOfElm[count].classList.remove("goaway", "comeback");
-    ChildOfElm[count].classList.add("rightslide");
-    if (count !== 0) {
-      ChildOfElm[count - 1].classList.add("leftslide");
-      ChildOfElm[count - 1].classList.remove("rightslide");
-    }
-    count++;
-  }
-}
-hammertime.on("swipeleft", NextSlide);
-function PreviousSlide() {
-  if (count !== 1) {
-    --count;
-
-    ChildOfElm[count].classList.remove("leftslide", "rightslide", "comeback");
-    ChildOfElm[count].classList.add("goaway");
-    if (count !== 0) {
-      ChildOfElm[count - 1].classList.remove("leftslide");
-      ChildOfElm[count - 1].classList.add("comeback");
-    }
-  }
-}
-
-hammertime.on("swiperight", PreviousSlide);
-const sliderPreviousBtn = document.querySelector(".previous");
-
-sliderPreviousBtn.addEventListener("click", PreviousSlide);
-const sliderNextBtn = document.querySelector(".next");
-
-sliderNextBtn.addEventListener("click", NextSlide);
-setInterval(() => {
-  if (count === 1) {
-    sliderPreviousBtn.style.display = "none";
-  } else {
-    sliderPreviousBtn.style.display = "flex";
-  }
-  if (count === 5) {
-    sliderNextBtn.style.display = "none";
-  } else {
-    sliderNextBtn.style.display = "flex";
-  }
-}, 100);

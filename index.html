@@ -3,258 +3,311 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="Assets/favicon.jpg" />
+    <title>IET on Campus GCUL</title>
+    <link rel="shortcut icon" href="Assets/favicon.jpg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="CSS/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="stylesheet" href="CSS/home.css" />
     <script
       src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
       type="module"
     ></script>
-    <title>IET On Campus GCU</title>
+    <script type="module" src="JS/globe-build.js"></script>
   </head>
   <body>
     <header>
-      <img src="Assets/logo.png" class="logo" />
+      <div class="wrap">
+        <a href="index.html"><img src="Assets/Logo.png" class="logo" /></a>
+        <span class="socials">
+          <a href="http://www.facebook.com/IETGCU" target="_blank"
+            ><img src="Assets/facebook.svg" alt="facebook"
+          /></a>
+          <a
+            href="http://www.instagram.com/iet_gcu/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
+            target="_blank"
+            ><img src="Assets/instagram.svg" alt="instagram"
+          /></a>
+          <a href="mailto:hashimcpro@gmail.com"
+            ><img src="Assets/mail.svg" alt="email"
+          /></a>
+        </span>
+        <button id="hamburger">
+          <span class="first"></span>
+          <span class="second"></span>
+          <span class="third"></span>
+        </button>
+      </div>
 
-      <button id="hamburger">
-        <span class="first"></span>
-        <span class="second"></span>
-        <span class="third"></span>
-      </button>
-
-      <div class="wrap"></div>
       <div class="slides slide_1"></div>
       <div class="slides slide_2"></div>
       <div class="slides slide_3"></div>
       <nav>
         <ul>
-          <li><a id="home">HOME</a></li>
-          <li><a id="events">EVENTS</a></li>
-          <li><a id="team">MEET THE TEAM</a></li>
-          <li><a id="news">NEWS</a></li>
-          <li><a id="joinin">JOIN THE TEAM</a></li>
-          <li><a id="faqs">FAQ'S</a></li>
-          <li><a id="contacts">CONTACT</a></li>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="events"><a href="events.html">Events</a></li>
+          <li id="team"><a href="team.html">Meet the Team</a></li>
+          <li id="news">
+            <a href="Sponsorship-packages.html">Sponsorship packages</a>
+          </li>
+          <li id="contacts"><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="socialcointaner">
-          <a href="https://www.facebook.com/IETGCU/" target="_blank">
-            <img
-              src="Assets/facebook.svg"
-              alt="facebook"
-              height="50px"
-              width="auto"
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/iet_gcu/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
-            target="_blank"
-          >
-            <img
-              src="Assets/insta.svg"
-              alt="instagram"
-              height="50px"
-              width="auto"
-            />
-          </a>
-        </div>
       </nav>
     </header>
-    <main class="main">
-      <div class="typewriter">
+    <main>
+      <div class="hero">
+        <h1>Working to <b>engineer</b> a <b>better</b> world</h1>
+        <h6>
+          We <b style="color: #bf52c1">inspire, inform and influence</b> the
+          global engineering and technology community to engineer a better
+          world.
+        </h6>
+      </div>
+      <div class="globe"></div>
+      <div class="blur"></div>
+      <div class="unis">
+        <h3>IET Pakistan is <u>everywhere</u> ↘</h3>
+        <span class="UniImgs">
+          <img src="Assets/GCU.png" alt="GCU" />
+          <img src="Assets/NUST.png" alt="NUST" />
+          <img src="Assets/Comsats.png" alt="Comsats" />
+          <img src="Assets/PU.png" alt="PU" />
+          <img
+            src="Assets/Ghulam IShaq khan.png"
+            alt="Ghulam ishak"
+            srcset=""
+          />
+          <img src="Assets/UET.png" alt="UET" />
+          <img src="Assets/Khawaja fared.png" alt="Fared Khawaja" />
+        </span>
+      </div>
+      <div class="about">
+        <h3 style="color: #ffffff">
+          We provide resources, support, and networking opportunities for
+          professionals in tech.
+        </h3>
+      </div>
+      <div class="card">
+        <h6 style="padding: 30px 0; text-align: left">
+          <em class="thirt">IET (Institute of Engineering and Technology)</em>,
+          a prestigious society of the
+          <a href="#" class="linked">Government College University(GCU)</a> is a
+          professional organization based in the United Kingdom that focuses on
+          engineering and technology. We support like-minded students in moving
+          up and becoming noticed and assist in creating a sense of community
+          inside their University by providing materials and financing for
+          extracurricular activities. Through the combined efforts of the IET
+          and your student body, On Campus provides you with the tools,
+          contacts, and inspiration you need to confidently embark into your
+          career.
+          <a class="gradientcolor" href="https://www.theiet.org" target="_blank"
+            >Learn more
+            <img
+              src="Assets/arrow.svg"
+              class="arrow"
+              alt="arrow"
+              style="margin: -4px 5px"
+          /></a>
+        </h6>
         <dotlottie-player
-          id="rocket"
-          src="https://lottie.host/fe6abc14-9f69-43d3-ad43-45cc1fee8e0f/Lbp0uBVTB7.json"
+          class="skills"
+          src="https://lottie.host/add53626-4fc4-4b2a-8357-54f0ee522773/z7p7yivQir.json"
           background="transparent"
           speed="1"
-          style="width: 300px; height: 300px"
           loop
           autoplay
         ></dotlottie-player>
-        <h1 class="highlight">
-          Institute of Engineering and Technology on campus Government College
-          University Lahore
-        </h1>
-
+      </div>
+      <div class="card prob">
+        <h6 style="padding: 30px 0; text-align: left">
+          <em class="thirt"
+            >The chance to learn from and build with exceptional minds could be
+            just a collaboration away.
+          </em>
+          <ul style="padding: 15px 0 0 10px">
+            <li>Get a chance to meet <u>15,000+</u> students on campus</li>
+            <li>
+              Get <u>advertised</u> on our social media handles and our website
+            </li>
+            <li>Establish a long-term partnership for future events</li>
+            <li>
+              Vitalize their business reputation and improve consumer perception
+            </li>
+            <li>
+              Increase visibility of their businesses through our diversified
+              online presence of <u>300,000+</u> users.
+            </li>
+          </ul>
+          <a class="gradientcolor" href="Sponsorship-packages.html"
+            >Partner now
+            <img src="Assets/arrow.svg" alt="arrow" style="margin: -4px 5px"
+          /></a>
+        </h6>
         <dotlottie-player
-          id="Wheels"
-          src="https://lottie.host/1ae15f7e-3988-4fe4-8d5d-094b8164e665/Be1boYWFA2.json"
+          src="https://lottie.host/b3d81474-231e-4d15-afe8-d034f9e06321/4bwwSgU0Px.json"
           background="transparent"
           speed="1"
-          style="width: 300px; height: 300px"
+          class="skills"
           loop
           autoplay
         ></dotlottie-player>
-        <dotlottie-player id="person" src="https://lottie.host/86aca3da-ab3b-4311-98db-166640331a84/9o2wb84dU4.json" background="transparent" speed="1"  loop autoplay></dotlottie-player>
-        <p>Who Are We?</p>
-        <ul>
-          <li>Students Based</li>
-          <li>Multidisciplinary Professional Engineering Institution</li>
-          <li>Unusual. Unconventional. Unpredictable.</li>
-        </ul>
-        <p>What We Do?</p>
-        <ul>
-          <li>Organising Engineering & Other Events</li>
-          <li>Promoting Technological Innovation</li>
-          <li>Organising Autoshows😁</li>
-        </ul>
-        <p>Mission <strike style="opacity: 0.4">im</strike>possible</p>
-        <ul>
-          <li>
-            We take out the IM from possible, because we don't believe in Limiting
-          </li>
-          <li>Beliefs. Potiental. Creativity</li>
-          <li>Constantly redefining what's Possible now and will be.</li>
-        </ul>
       </div>
-      <div class="eve eventsdiv">
-        <p>Our Main Events</p>
-      </div>
-      <div class="autoshow">
-        <p>AutoShow 2K23</p>
-        <div class="sliderauto">
-          <div class="rightslide">autoshow images</div>
-          <div>autoshow images</div>
-          <div>autoshow images</div>
-          <div>autoshow images</div>
-          <div>autoshow images</div>
-          <button class="next">
-            <img src="Assets/arrow.png" class="img" />
-          </button>
-          <button class="previous">
-            <img src="Assets/arrow.png" class="img rev" alt="prev" />
-          </button>
+      <div class="vg">
+        <div class="card vertical">
+          <h6 style="padding: 30px 0; text-align: left">
+            <em class="thirt">Partnership Criteria</em>, accommodates
+            <u>all types of businesses</u>,whether they are home-based
+            businesses, startups, small to medium-sized businesses, big
+            corporations, or conglomerates.It has been thoughtfully created to
+            provide our potential partners with limitless options and
+            extraordinary flexibility to select what suits them best.
+            <a class="gradientcolor" href="Sponsorship-packages.html"
+              >Partnership Packages
+              <img src="Assets/arrow.svg" alt="arrow" style="margin: -4px 5px"
+            /></a>
+          </h6>
+          <dotlottie-player
+            src="https://lottie.host/4a04c541-ec81-4025-a479-f8936d459757/ut6Byhyi6v.json"
+            background="transparent"
+            speed="1"
+            class="skills"
+            loop
+            autoplay
+          ></dotlottie-player>
+        </div>
+        <div class="card vertical">
+          <h6 style="padding: 30px 0; text-align: left">
+            <em class="thirt">Recent events</em> include GCU's historic
+            first-ever <u>Autoshow</u>, where nearly 100 cars and 20 super bikes
+            roared onto campus! Students reveled in tire-shredding donuts and
+            adrenaline-pumping burnouts, marking a monumental moment for student
+            at GCU.
+            <a class="gradientcolor" href="events.html"
+              >Explore
+              <img src="Assets/arrow.svg" alt="arrow" style="margin: -4px 5px"
+            /></a>
+          </h6>
+          <dotlottie-player
+            src="https://lottie.host/b5a59b90-0640-4e65-8013-a1c616791689/1zaht0Kfvy.json"
+            background="transparent"
+            speed="1"
+            class="skills"
+            loop
+            autoplay
+          ></dotlottie-player>
         </div>
       </div>
-      <div class="wrapTeam">
-
-        <section class="Team">
-          <h1>TEAM</h1>
-          <p>2023-2024</p>
-          <div class="teamcontainer">
-            <div class="card">
-              <img src="Team images/president.jpg" alt="President's img" height="100%" width="100%" />
-              <h2>Hafiz M.Abdur Rehman</h2>
-              <h3>President</h3>
-              </div>
-              <div class="card">
-                <img src="Team images/Quratulain.jpg" alt="Female Vice president's jpg" height="100%" width="100%" />
-                <h2>Quratulain Kadeer</h2>
-                <h3>Female Vice President</h3>
-                </div>
-                <div class="card">
-                  <img src="Team images/Rao Haseeb.jpg" alt="Vice President's jpg" height="100%" width="100%" />
-                  <h2>Rao Haseeb</h2>
-                  <h3>Vice President</h3>
-                </div>
-                <div class="card">
-                  <img src="Team images/Moeed Hussain.jpg" alt="General Secartary's jpg" height="100%" width="100%" />
-                  <h2>Moeed Hussain</h2>
-                  <h3>General Secretary</h3>
-                  </div>
-                  <div class="card">
-                    <img src="Team images/Wasif.jpg" alt="Joint Secartary's img" height="100%" width="100%" />
-                    <h2>Wasif Shafiq</h2>
-                    <h3>Joint Secratory</h3>
-                  </div>
-                  <div class="card">
-                    <img src="Team images/Waleewd.jpg" alt="Event head's jpg" height="100%" width="100%" />
-                    <h2>Waleed Hanif</h2>
-                    <h3>Joint Secratory</h3>
-                  </div>
-                  <div class="card">
-                    <img src="Team images/adeel.jpg" alt="Social Media Head's jpg" height="100%" width="100%" />
-                    <h2>Adeel Shahzad</h2>
-                    <h3>Social Media Head</h3>
-        </div>
-        <div class="card">
-          <img src="Team images/Kunwar.jpg" alt="Kunwar jpg" height="100%" width="100%" />
-          <h2>Kunwar</h2>
-          <h3>Event Head</spa>
+      <div class="faqs">
+        <details class="faqs_item">
+          <summary
+            class="faqs_question closed"
+            onclick="classList.toggle('opened'), classList.toggle('closed')"
+          >
+            <p>How can I join IET?</p>
+            <img src="Assets/plus.svg" alt="plus" />
+          </summary>
+          <div class="faqs_answer">
+            You can join IET by signing up for membership in our Office in
+            Electrical Engineering Department GCU.
           </div>
-          <div class="card">
-            <img src="Team images/iltaf.jpg" alt="Trasure's Jpg" height="100%" width="100%" />
-            <h2>Iltaf</h2>
-            <h3>Treasurer</h3>
+        </details>
+        <details class="faqs_item">
+          <summary
+            class="faqs_question closed"
+            onclick="classList.toggle('opened'), classList.toggle('closed')"
+          >
+            <p>What is the origin of IET?</p>
+            <img src="Assets/plus.svg" alt="plus" />
+          </summary>
+          <div class="faqs_answer">
+            Institute of Engineering and Technology is British based society for
+            engineers. This society focuses on the research and enhance the
+            capability of the engineers.
           </div>
-          <div class="card">
-            <img src="Team images/maleeha khan.jpg" alt="Cinematographer's jpg" height="100%" width="100%" />
-            <h2>Maleeha Khan</h2>
-            <h3>Cinematographer</h3>
-            </div>
-          <div class="card">
-            <img src="Team images/Dilawar Hussain.jpg" alt="Photographer's Jpg" height="100%" width="100%" />
-            <h2>Dilawar Hussain</h2>
-            <h3>Photographer</h3>
+        </details>
+        <details class="faqs_item">
+          <summary
+            class="faqs_question closed"
+            onclick="classList.toggle('opened'), classList.toggle('closed')"
+          >
+            <p>How much is the membership fee?</p>
+            <img src="Assets/plus.svg" alt="plus" />
+          </summary>
+          <div class="faqs_answer">The membership fee is only 100 rupee.</div>
+        </details>
+        <details class="faqs_item">
+          <summary
+            class="faqs_question closed"
+            onclick="classList.toggle('opened'), classList.toggle('closed')"
+          >
+            <p>Does IET On Campus Society have an office?</p>
+            <img src="Assets/plus.svg" alt="plus" />
+          </summary>
+          <div class="faqs_answer">
+            Yes the office of IET is located in Electrical Engineering
+            Department GCU Lahore.
           </div>
-            <div class="card">
-              <img src="Team images/usama.jpg" alt="Office Secartary's jpg" height="100%" width="100%" />
-              <h2>Usama Mehran</h2>
-              <h3>Office Secratory</h3>
-            </div>
-            </div>
-      </section>
-    </div>
-    <article>
-      <div class="eve" >
-        <p>NEWS</p>
+        </details>
+        <details class="faqs_item">
+          <summary
+            class="faqs_question closed"
+            onclick="classList.toggle('opened'), classList.toggle('closed')"
+          >
+            <p>What are the benefits of being a member of the society?</p>
+            <img src="Assets/plus.svg" alt="plus" />
+          </summary>
+          <div class="faqs_answer">
+            Gaining valuable experience in professional and personal growth.
+            Participating in various career building events and seminars.
+          </div>
+        </details>
+        <details class="faqs_item">
+          <summary
+            class="faqs_question closed"
+            onclick="classList.toggle('opened'), classList.toggle('closed')"
+          >
+            <p>Popular events of IET On Campus?</p>
+            <img src="Assets/plus.svg" alt="plus" />
+          </summary>
+          <div class="faqs_answer">
+            The EE AUTO SHOW is one of the major events organized by the IET on
+            Campus GCU Lahore.
+          </div>
+        </details>
       </div>
-      <span>
-
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quod, explicabo fugiat praesentium sunt nostrum recusandae eius. Consequatur repudiandae libero aspernatur nulla asperiores modi rem nobis illo obcaecati non totam dolore ullam a placeat eligendi, ut veniam architecto tenetur molestias autem. Nobis amet harum, facilis consequatur, consequuntur officia at optio dignissimos iste error modi doloremque impedit provident praesentium molestias est blanditiis? Necessitatibus, facere alias? Recusandae, ducimus velit et voluptatem dolorum inventore quae illum molestias accusamus veniam. Sequi, minima quasi deleniti dolorem similique a doloremque reiciendis impedit ex voluptate, aliquid laborum voluptatum alias? Quasi, iste? Eius veniam, repellat enim quis ipsum ducimus qui, eaque illum pariatur assumenda temporibus, necessitatibus vitae! Est ab in quo dolor voluptatibus blanditiis provident voluptas repellat tempore.</p>
-      <img src="" alt="some image">
-    </span>
-    </article>
-  
-
-    <div class="faqs">
-      <p>FAQs</p>
-<span>
-  <h3><b>1-</b>How can you join in?</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo maxime perspiciatis dolorem maiores eius soluta labore perferendis sequi cumque provident?</p>
-  <h3><b>2-</b>How can you join in?</h3>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta minima sint odit ab voluptas, porro iste, magnam, adipisci dignissimos quod quidem iure ad quibusdam illo voluptatum delectus cupiditate expedita nobis. Necessitatibus, sint aperiam. Id earum a impedit excepturi expedita mollitia doloribus voluptate qui neque nulla?</p>
-  <h3><b>3-</b>How can you join in?</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vero deleniti aut animi vel officia.</p>
-  <h3><b>4-</b>How can you join in?</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque in nam vel saepe pariatur earum nobis? Dignissimos facere perferendis iusto?</p>
-  <h3><b>5-</b>How can you join in?</h3>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae ratione ad suscipit iure fugiat, assumenda numquam provident quidem totam optio eos natus laborum autem explicabo quo libero, odio adipisci veritatis exercitationem saepe harum eaque voluptates quia sit? Aspernatur, et culpa?</p>
-</span>
-    </div>
- 
-    <footer>
-<h2>SUBSCRIBE TO OUR WEEKLY NEWS LETTER</h2>
-<div class="email">
-  <p>EMAIL</p>
-  <input type="text" name="" id="getEmail">
-  <button id="subs">SUBSCRIBE</button>
-</div>
-<span>
-
-  <a href="https://www.facebook.com/IETGCU/" target="_blank">
-
-    <img src="Assets/Facebook_Logo.webp" alt="facebook" height="50px" width="auto">
-  </a>
-  <a href="https://www.instagram.com/iet_gcu/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
-
-    <img src="Assets/Instagram_Logo.webp" alt="instagram" height="50px" width="auto">
-  </a>
-</span>
-  <p>© 2020, All rights reserved.</p>
-    </footer>
+      <footer>
+        <h4>Subscribe to our Newsletter</h4>
+        <div class="data">
+          <p>Email</p>
+          <input type="text" id="email" name="email" />
+          <button id="Sub">SUBSCRIBE</button>
+        </div>
+        <div class="fsoc">
+          <a href="http://www.facebook.com/IETGCU" target="_blank"
+            ><img src="Assets/facebook.svg" alt="facebook"
+          /></a>
+          <a
+            href="http://www.instagram.com/iet_gcu/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
+            target="_blank"
+            ><img src="Assets/instagram.svg" alt="instagram"
+          /></a>
+          <a href="mailto:hashimcpro@gmail.com"
+            ><img src="Assets/mail.svg" alt="email"
+          /></a>
+        </div>
+        <div class="watermark">
+          Made by
+          <a href="http://sites.google.com/view/hashimbaloch/" target="_blank"
+            >hashim</a
+          >↗
+        </div>
+      </footer>
     </main>
+
     <script src="JS/index.js"></script>
   </body>
 </html>
-

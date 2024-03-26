@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../Assets/Sansation_Bold.woff2") format("woff");
+}
+main {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: fit-content;
+  width: 100%;
+  background: #0d1117;
+  overflow-x: hidden;
+}
+
+h1 {
+  background-image: linear-gradient(to right, #5b79ff 0%, #d588f3 100%);
+  background-clip: text;
+  color: transparent;
+  margin: 120px 0 0 100px;
+  width: fit-content;
+  font-family: Righteous;
+  font-size: 48px;
+  font-weight: 400;
+}
+h2 {
+  font-family: Sansation;
+  color: #ffffff;
+  font-size: 45px;
+}
+h3 {
+  font-family: Sansation;
+  background-image: linear-gradient(to right, #ffc2c1 0%, #7cd3f0 100%);
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+  font-size: 45px;
+  border-bottom: 4px solid #7cd3f0;
+}
+p {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 18px;
+  margin: 5px 100px;
+}
+.vg {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin: 75px 0 0 0;
+}
+.card {
+  width: 42.5vw;
+  margin: 0 0 3vw 5vw;
+  background-color: #161b22;
+  border-radius: 21px;
+  border: 1.7px solid #2f353c;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  padding-bottom: 50px;
+}
+.heading {
+  font-family: "Sansation";
+  font-size: 23px;
+  color: #ffffff;
+  margin-top: 50px;
+}
+.font {
+  font-family: "Sansation";
+  font-size: 18px;
+  font-weight: 500;
+  color: #6e7681;
+  width: 100%;
+  margin-top: 25px;
+}
+u {
+  font-family: "Sansation", sans-serif;
+  font-weight: 400;
+  color: #88d498;
+  opacity: 0.6;
+}
+a {
+  text-decoration: none;
+}
+.pack {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+del {
+  opacity: 0.5;
+}
+.link {
+  margin-left: 5vw;
+}
+
+.diamond {
+  list-style-image: url("../Assets/Diamond.svg");
+}
+.Platinum {
+  list-style-image: url("../Assets/Platinum.svg");
+}
+.Gold {
+  list-style-image: url("../Assets/Gold.svg");
+}
+.Silver {
+  list-style-image: url("../Assets/Silver.svg");
+}
+.Bronze {
+  list-style-image: url("../Assets/Bronze.svg");
+}
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 40px;
+    margin: 100px 0 0 0;
+    padding-left: 5vw;
+  }
+  p {
+    margin: 15px 5vw;
+  }
+  .vg {
+    flex-direction: column;
+  }
+  .card {
+    width: 90vw;
+  }
+  .pack {
+    flex-direction: column;
+  }
+}

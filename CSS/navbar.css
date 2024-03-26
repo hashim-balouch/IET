@@ -1,0 +1,354 @@
+@font-face {
+  font-family: "Sansation";
+  src: url("../Assets/Sansation_Bold.woff2") format("woff");
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #0d1117;
+  overflow-x: hidden;
+}
+.wrap {
+  height: 38px;
+  width: 100%;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  background: rgb(13, 7, 23, 0.5);
+}
+
+.logo {
+  margin: 4px 6px;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  height: 32px;
+  width: auto;
+}
+.socials {
+  margin-left: calc(100% - 122px);
+  position: absolute;
+  top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+#hamburger {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  pointer-events: auto;
+  position: fixed;
+  top: 10px;
+  left: calc(100% - 31px);
+  z-index: 999;
+  aspect-ratio: 4/3.2;
+  height: auto;
+  width: 21px;
+}
+#hamburger:hover span {
+  animation: Hover 2.5s linear 0s infinite normal;
+}
+.hover span {
+  animation: Hover 5s linear 0s infinite normal;
+}
+.first {
+  margin: 0;
+  padding: 0;
+  background-color: #e6efe9;
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.second {
+  margin: 0;
+  padding: 0;
+  background-color: #e6efe9;
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.third {
+  margin: 0;
+  padding: 0;
+  background-color: #e6efe9;
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.clicked {
+  transform: rotate(90deg);
+  transition: all cubic-bezier(0.95, 0.05, 0.96, 0.03) 500ms;
+}
+.clicked-rev {
+  transform: rotate(0);
+  transition: all cubic-bezier(0.95, 0.05, 0.96, 0.03) 500ms;
+}
+
+.anime {
+  transform: rotate(-62deg) translate(1px, 5px);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.25s 0.5s !important;
+}
+
+.anime-rev {
+  transform: rotate(0deg) translate(0);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.25s 0.5s !important;
+}
+.anime0 {
+  transform: rotate(60deg) translate(-8.5px, 1px);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.25s 0.5s !important;
+}
+
+nav {
+  display: none;
+  margin: 0;
+  color: white;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: xx-large;
+  background: linear-gradient(to right, #d588f3 0%, #5b79ff 100%);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 15;
+  justify-content: center;
+  align-items: center;
+}
+nav ul {
+  padding: 0;
+}
+nav ul li {
+  list-style: none;
+  font-family: "Righteous", monospace;
+  transform-origin: left bottom;
+  cursor: pointer;
+  text-align: center;
+  margin: 7px;
+}
+nav ul li a:hover {
+  color: #0d1117;
+  transition: all linear 250ms;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+.slides {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh; /* Here It is*/
+  margin: 0;
+  padding: 0;
+  left: 100vw;
+  overflow: hidden;
+  display: none;
+}
+.slide_1 {
+  background: #dd4805;
+  z-index: 10;
+}
+
+.slide_2 {
+  background: #5ae86b;
+  z-index: 13;
+}
+.slide_3 {
+  background: #bf52c1;
+  z-index: 14;
+}
+
+footer {
+  background: linear-gradient(to right, #d588f3 0%, #5b79ff 100%);
+  margin: 50px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+h4 {
+  font-family: "Sansation";
+  color: #e6efe979;
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 35px 0;
+}
+.data > p {
+  font-family: "Sansation";
+  font-size: 12px;
+  margin: 0;
+  color: #e6efe9;
+  padding: 0;
+}
+input {
+  background-color: rgb(255, 255, 255, 0.5);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #161b22;
+  height: 27px;
+  opacity: 0.6;
+  text-indent: 10px;
+  margin: 5px 0 0 0;
+}
+input:focus {
+  outline: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+#Sub {
+  height: 27px;
+  cursor: pointer;
+  background: linear-gradient(to right, #f8c371 0%, #d588f3 100%);
+  opacity: 0.6;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "Sansation";
+}
+.fsoc {
+  margin: 30px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.fsoc a img {
+  height: 35px;
+  width: auto;
+}
+.watermark {
+  text-align: center;
+  margin: 20px 0 0 0;
+  padding: 4px;
+  background: transparent;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 11px;
+}
+.watermark > a {
+  display: inline;
+  color: white;
+  text-decoration: underline;
+}
+@keyframes animatemain {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+@keyframes animateslides {
+  from {
+    left: 100vw;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes animatenavrev {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100vw;
+  }
+}
+@keyframes animateslidesrev {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100vw;
+  }
+}
+@keyframes navitems {
+  0% {
+    opacity: 0;
+    transform: rotate(-360deg);
+    letter-spacing: -120px;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: auto;
+    transform: rotate(0deg);
+  }
+}
+@keyframes Hover {
+  0% {
+    background-color: #eaf6ff;
+  }
+  25% {
+    background-color: #65ffe5;
+  }
+  50% {
+    background-color: #e7fc88;
+  }
+  75% {
+    background-color: rgb(250, 176, 86);
+  }
+  100% {
+    background-color: rgb(90, 177, 254);
+  }
+}
+::-webkit-scrollbar {
+  width: 7px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #5b79ff 0%, #d588f3 100%);
+  border-radius: 20px;
+}
+@media screen and (min-width: 1000px) {
+  .wrap {
+    height: 75px;
+  }
+  .logo {
+    height: 56px;
+    margin: 13px 0 0 18px;
+  }
+  .socials {
+    gap: 10px;
+    top: 18px;
+    left: 83%;
+    margin: 0;
+  }
+  .socials a img {
+    height: 36px;
+  }
+  #hamburger {
+    scale: 1.5;
+    top: 28px;
+    left: calc(100% - 42px);
+  }
+  nav {
+    font-size: 60px;
+  }
+  input {
+    width: 350px;
+  }
+}
